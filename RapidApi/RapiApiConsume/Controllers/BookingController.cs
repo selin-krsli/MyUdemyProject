@@ -26,7 +26,6 @@ namespace RapiApiConsume.Controllers
                 var values = JsonConvert.DeserializeObject<BookingApiViewModel>(body);
                 return View(values.results.ToList());
             }
-            return View();
         }
     }
 }
