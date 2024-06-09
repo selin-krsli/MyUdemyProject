@@ -26,7 +26,6 @@ namespace RapiApiConsume.Controllers
                 var values = JsonConvert.DeserializeObject<ExchangeViewModel>(body);
                 return View(values.exchange_rates.ToList());
             }
-            return View();
         }
     }
 }
