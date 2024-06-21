@@ -31,6 +31,9 @@ builder.Services.AddScoped<IAboutService, AboutManager>();
 builder.Services.AddScoped<IBookingDal, EfBookingDal>();
 builder.Services.AddScoped<IBookingService, BookingManager>();  
 
+builder.Services.AddScoped<IContactDal, EfContactDal>();
+builder.Services.AddScoped<IContactService, ContactManager>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 //Cors metodu özellikle Api iþlemlerinde; bir Api'nin baþka kaynaklar tarafýndan kontrol edilmesine yani tüketilmesini saðlayan metot.
