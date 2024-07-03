@@ -27,13 +27,12 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
         }
         [HttpPut]
-        public IActionResult UpdateRoom(int id)
-        {
-            var value = _roomService.TGetByID(id);
-            _roomService.TUpdate(value);
+        public IActionResult UpdateRoom(Room room)
+        {          
+            _roomService.TUpdate(room);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteRoom(int id)
         {
             var value = _roomService.TGetByID(id);
