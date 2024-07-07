@@ -46,7 +46,6 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
-        [HttpDelete]
         public async Task<IActionResult> DeleteGuest(int id)
         {
             if(id == 0)
